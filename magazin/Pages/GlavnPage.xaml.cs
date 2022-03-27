@@ -1,4 +1,5 @@
-﻿using System;
+﻿using magazin.Cl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace magazin.Pages
         public GlavnPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataHelper.frame.Navigate(new ChilPage());
         }
     }
 }

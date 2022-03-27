@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Asya\Desktop\magazin\magazin\obj\Debug\
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\
 magazin
 none
 false
 DEBUG;TRACE
-C:\Users\Asya\Desktop\magazin\magazin\App.xaml
-21266097940
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\App.xaml
+5-3000646
 
-8-1025569175
-151081396562
-MainWindow.xaml;Pages\GlavnPage.xaml;
+11-340042948
+15-766403634
+MainWindow.xaml;Pages\BasketPage.xaml;Pages\ChilPage.xaml;Pages\GlavnPage.xaml;Pages\InputPage.xaml;
 
 True
 

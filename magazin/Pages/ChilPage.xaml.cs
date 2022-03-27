@@ -1,5 +1,4 @@
-﻿using magazin.Cl;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using magazin.Pages;
 
-namespace magazin
+namespace magazin.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ChilPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChilPage : Page
     {
-        public MainWindow()
+        public ChilPage()
         {
             InitializeComponent();
-            DataHelper.frame = FrmMain;
-            DataHelper.frame.Navigate(new GlavnPage());
         }
     }
 }

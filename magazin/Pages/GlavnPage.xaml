@@ -5,58 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:magazin.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="GlavnPage"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="#F6EBEB">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Resurs/i755.jpg"/>
-        </Grid.Background>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="127*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Margin="135,12,135,5" Height="52" Width="530">
-
-            <Button
-  Style="{StaticResource MaterialDesignRaisedDarkButton}"
-  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
-  Content="Главная"
-  IsEnabled="{Binding DataContext.ControlsEnabled, 
-                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                Margin="10"
-                Width="100" Background="#FF6E3E2B"/>
-            <Button
-  Style="{StaticResource MaterialDesignRaisedDarkButton}"
-  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
-  Content="Корзина"
-  IsEnabled="{Binding DataContext.ControlsEnabled, 
-                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                 Margin="10"
-                Width="100" Background="#FF6E3E2B"/>
-            <Button
-  Style="{StaticResource MaterialDesignRaisedDarkButton}"
-  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
-  Content="Регистрация"
-  IsEnabled="{Binding DataContext.ControlsEnabled, 
-                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                 Margin="10"
-                Width="150" Background="#FF6E3E2B"/>
-            <Button
-  Style="{StaticResource MaterialDesignRaisedDarkButton}"
-  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
-  Content="Вход"
-  IsEnabled="{Binding DataContext.ControlsEnabled, 
-                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                 Margin="10"
-                Width="100" Background="#FF6E3E2B"/>
+        <StackPanel Background="#E8C7C7">
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10"
+                       Text="Yfpdfybt"
+                       FontSize="20"/>
         </StackPanel>
+
+        <StackPanel Grid.Row="2" >
+            <Image Source="/Resurs/image 1.png"  />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <Image Source="/Resurs/image 2.png" Stretch="Fill"  Width="166" Height="272"/>
+            <Image Source="/Resurs/image 3.png" Stretch="Fill"  Width="166" Height="272"/>
+            <Image Source="/Resurs/image 4.png" Stretch="Fill"  Width="166" Height="272"/>
+            <Image Source="/Resurs/image 12.png" Stretch="Fill"  Width="166" Height="272"/>
+            <Image Source="/Resurs/image 13.png" Stretch="Fill" Width="166" Height="272"/>
+        </StackPanel>
+        <Button Grid.Row="4"
+                VerticalAlignment="Center" Height="49" 
+                Margin="20,65,660,88"
+                Background="Transparent"
+                Content="Дети"
+                BorderBrush="Transparent"
+                Foreground="Black" Click="Button_Click">
+
+        </Button>
+
+
 
 
     </Grid>
