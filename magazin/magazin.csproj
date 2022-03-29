@@ -76,11 +76,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\BasketPage.xaml">
+    <Page Include="Pages\BoysPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ChilPage.xaml">
+    <Page Include="Pages\GirlPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,23 +88,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\InputPage.xaml">
+    <Page Include="Pages\WomenPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\BasketPage.xaml.cs">
-      <DependentUpon>BasketPage.xaml</DependentUpon>
+    <Compile Include="Pages\BoysPage.xaml.cs">
+      <DependentUpon>BoysPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChilPage.xaml.cs">
-      <DependentUpon>ChilPage.xaml</DependentUpon>
+    <Compile Include="Pages\GirlPage.xaml.cs">
+      <DependentUpon>GirlPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\GlavnPage.xaml.cs">
       <DependentUpon>GlavnPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\InputPage.xaml.cs">
-      <DependentUpon>InputPage.xaml</DependentUpon>
+    <Compile Include="Pages\WomenPage.xaml.cs">
+      <DependentUpon>WomenPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -128,22 +128,36 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resurs\Fonts\Roboto-Black.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-BlackItalic.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Bold.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-BoldItalic.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Italic.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Light.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-LightItalic.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Medium.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-MediumItalic.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Regular.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-Thin.ttf" />
+    <Resource Include="Resurs\Fonts\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resurs\image 5.png" />
-    <Resource Include="Resurs\image 6.png" />
-    <Resource Include="Resurs\image 7.png" />
+    <Resource Include="Resurs\Fonts\Apache License.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resurs\image 1.png" />
-    <Resource Include="Resurs\image 12.png" />
-    <Resource Include="Resurs\image 13.png" />
-    <Resource Include="Resurs\image 2.png" />
-    <Resource Include="Resurs\image 3.png" />
-    <Resource Include="Resurs\image 4.png" />
+    <Resource Include="Resurs\Glavn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\f19eea0bfa6d371e5882c0603480a204.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\5cdbbcd7e47ab0fbb142624186ab24ba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\6a1cd9a6347e345ca702b2ef5902c2b6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

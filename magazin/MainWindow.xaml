@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800"
+        Title="MainWindow" Height="800" Width="1200"
+        MinHeight="800" MinWidth="900"
+        
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize"
-         Background="#F6EBEB">
+        ResizeMode="NoResize" 
+        FontFamily="/magazin;component/Resurs/Fonts/#Roboto">
     <Grid>
         <Frame Name="FrmMain" NavigationUIVisibility="Hidden"/>
-        
+        <!--WindowState="Maximized"-->
     </Grid>
 </Window>

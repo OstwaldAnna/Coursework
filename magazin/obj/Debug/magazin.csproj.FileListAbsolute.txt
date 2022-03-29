@@ -46,5 +46,9 @@ C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.csproj.CoreC
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.csproj.CopyComplete
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.exe
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.pdb
-C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\ChilPage.g.cs
-C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\ChilPage.baml
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\WomenPage.g.cs
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\WomenPage.baml
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\GirlPage.g.cs
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\GirlPage.baml
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\BoysPage.g.cs
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\BoysPage.baml
