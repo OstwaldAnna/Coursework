@@ -26,19 +26,5 @@ namespace magazin.Pages
             InitializeComponent();
         }
 
-        private void women_Click(object sender, RoutedEventArgs e)
-        {
-            DataHelper.frame.Navigate(new WomenPage());
-        }
-
-        private void girl_Click(object sender, RoutedEventArgs e)
-        {
-            DataHelper.frame.Navigate(new GirlPage());
-        }
-
-        private void boys_Click(object sender, RoutedEventArgs e)
-        {
-            DataHelper.frame.Navigate(new BoysPage());
-        }
-    }
+ 
 }

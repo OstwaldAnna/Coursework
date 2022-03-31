@@ -12,51 +12,20 @@
       FontSize="20">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="16*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="116*"/>
-            <RowDefinition Height="23*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="147*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
-                    Margin="20" >
-            <Button Name="women"
-                    Content="Женшины" 
-                    Background="Transparent"
-                    BorderBrush="Transparent" 
-                    Foreground="Black"
-                    FontWeight="Regular" 
-                    Click="women_Click"/>
-            <Button Name="girl"
-                    Content="Девочки" 
-                    Background="Transparent"
-                    BorderBrush="Transparent" 
-                    Foreground="Black"
-                    FontWeight="Regular" Click="girl_Click"/>
-            <Button Name="boys" 
-                    Content="Мальчики" 
-                    Background="Transparent"
-                    BorderBrush="Transparent" 
-                    Foreground="Black"
-                    FontWeight="Regular" Click="boys_Click"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock
+                Text="[Имя работника]" 
+                HorizontalAlignment="Right"/>
+
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20" >
-            <Button Name="Vxod" 
-                    Content="Вход" 
-                    Background="Transparent"
-                    BorderBrush="Transparent" 
-                    Foreground="Black"
-                    FontWeight="Regular"/>
-            <Button Name="Reg" 
-                    Content="Регистрация" 
-                    Background="Transparent"
-                    BorderBrush="Transparent" 
-                    Foreground="Black"
-                    FontWeight="Regular"/>
-            <materialDesign:PackIcon Kind="Basket" Height="30" Width="31"
-                                     Name="Bask"/>
-        </StackPanel>
-        <Image Source="/Resurs/Glavn.jpg" Grid.Row="2" Stretch="Fill" />
 
 
     </Grid>
