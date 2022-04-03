@@ -7,13 +7,28 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GravPage"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
-        FontSize="20"
+      FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
+      FontSize="20"
       Background="#A7B9D1"
-      >
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf">
 
     <Grid>
+        <lvc:PieChart LegendLocation="Bottom"
+                      Hoverable="False" DataTooltip="{x:Null}"
+                      Height="400">
+            <lvc:PieChart.Series>
+                <lvc:PieSeries Title="Джинсы" Values="2" DataLabels="True"
+                               LabelPoint="{Binding PointLabel}"/>
+                <lvc:PieSeries Title="Юбки" Values="2" DataLabels="True" 
+                               LabelPoint="{Binding PointLabel}"/>
+                <lvc:PieSeries Title="Футболки" Values="2" DataLabels="True" 
+                               LabelPoint="{Binding PointLabel}"/>
+                <lvc:PieSeries Title="Рубашки" Values="3" DataLabels="True" 
+                               LabelPoint="{Binding PointLabel}"/>
+                <lvc:PieSeries Title="Платья" Values="2" DataLabels="True" 
+                               LabelPoint="{Binding PointLabel}"/>
+            </lvc:PieChart.Series>
+        </lvc:PieChart>  
         
     </Grid>
 </Page>

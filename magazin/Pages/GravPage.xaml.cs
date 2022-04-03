@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace magazin.Pages
 {
@@ -23,6 +25,11 @@ namespace magazin.Pages
         public GravPage()
         {
             InitializeComponent();
+            PointLabel = chartPoint =>
+                string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
+            DataContext = this;
         }
+
+        public Func<ChartPoint, string> PointLabel { get; set; }
     }
 }

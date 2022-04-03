@@ -18,6 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DataGrid
+            Background="#BCD0EB"
             Name="DgOrders"
             AutoGenerateColumns="False" Grid.Row="0">
             <DataGrid.Columns>

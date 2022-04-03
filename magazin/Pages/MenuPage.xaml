@@ -55,6 +55,14 @@
                 IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Grav_Click" />
             <Button
+                Name="AddProduct"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Добавить товар"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="AddProduct_Click"  />
+            <Button
                 Name="Zakaz"
                 Style="{StaticResource MaterialDesignFlatDarkButton}"
                 Content="Заказы"

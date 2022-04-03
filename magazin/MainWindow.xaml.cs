@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using magazin.Pages;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace magazin
 {

@@ -62,3 +62,12 @@ C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\EntityFramework.xml
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.csproj.AssemblyReference.cache
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.dll
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.pdb
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.xml
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\AddProductPage.g.cs
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\Pages\AddProductPage.baml

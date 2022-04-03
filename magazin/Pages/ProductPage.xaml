@@ -49,6 +49,7 @@
 
         </StackPanel>
         <DataGrid
+            Background="#BCD0EB"
             Name="DgProduct"
             AutoGenerateColumns="False" Grid.Row="1" >
             <DataGrid.Columns>
