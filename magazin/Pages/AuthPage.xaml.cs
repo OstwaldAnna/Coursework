@@ -24,6 +24,7 @@ namespace magazin.Pages
         public AuthPage()
         {
             InitializeComponent();
+
         }
 
         private void Auth_Click(object sender, RoutedEventArgs e)
@@ -34,7 +35,8 @@ namespace magazin.Pages
                 var user = ODBClass.entities.User.FirstOrDefault(x => x.Login == NameTextBox.Text && x.Password == PasswordBox.Password);
                 if (user != null)
                 {
-                    DataHelper.frame.Navigate(new MenuPage());
+                    DataHelper.iduser = user.id;
+                    DataHelper.frame.Navigate(new MenuPage(user));
                 }
                 else { MessageBox.Show("Что-то пошло не так. Повторите попытку."); }
 

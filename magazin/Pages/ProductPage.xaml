@@ -14,18 +14,50 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
-            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Width="200">
+            <ComboBox
+                Name="CbProduct" 
+                materialDesign:HintAssist.Hint="Search"
+                materialDesign:HintAssist.HintOpacity=".26"
+                Margin="10"
+                DropDownClosed="CbProduct_DropDownClosed">
+                <!--<ComboBoxItem
+                    Content="Apple" />
+                <ComboBoxItem
+                    Content="Banana" />
+                <ComboBoxItem
+                    Content="Pear" />
+                <ComboBoxItem
+                    Content="Orange" />-->
+            </ComboBox>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Width="Auto" >
+            <Button
+                Name="BtnAll"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Показать все"
+                FontSize="18"
+                Width="Auto"
+                Margin="200,10,425,10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                Click="BtnAll_Click"/>
+
+        </StackPanel>
         <DataGrid
             Name="DgProduct"
-            AutoGenerateColumns="False" Grid.Row="0">
+            AutoGenerateColumns="False" Grid.Row="1" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Товар и артикул" Width="*" Binding="{Binding Product}"/>
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Product}"/>
                 <DataGridTextColumn Header="Размеры" Width="*" Binding="{Binding SizeObject.Name}" />
                 <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Amount}" />
-                <DataGridTextColumn Header="Цвета" Width="*" Binding="{Binding Colors}" />
+                <!--<DataGridTextColumn Header="Цвета" Width="*" Binding="{Binding Colours}" />-->
             </DataGrid.Columns>
+
         </DataGrid>
 
 

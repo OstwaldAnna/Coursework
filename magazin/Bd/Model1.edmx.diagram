@@ -5,20 +5,20 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e948604d0cf94cdbacc89c68549bbfaa" Name="Diagram1">
-        <EntityTypeShape EntityType="KurcWorkModel.Category" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.Delivery" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.Object" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.Orders" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.OrdersObject" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.SizeObject" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KurcWorkModel.User" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="KurcWorkModel.FK_Object_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="KurcWorkModel.FK_Delivery_Object" ManuallyRouted="false" />
-        <AssociationConnector Association="KurcWorkModel.FK_Object_SizeObject" ManuallyRouted="false" />
-        <AssociationConnector Association="KurcWorkModel.FK_Object_User" ManuallyRouted="false" />
-        <AssociationConnector Association="KurcWorkModel.FK_OrdersObject_Object" ManuallyRouted="false" />
-        <AssociationConnector Association="KurcWorkModel.FK_OrdersObject_Orders" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KurcWorkModel.Category" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="KurcWorkModel.Delivery" Width="1.5" PointX="5.25" PointY="6.625" />
+        <EntityTypeShape EntityType="KurcWorkModel.Object" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="KurcWorkModel.Orders" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="KurcWorkModel.OrdersObject" Width="1.5" PointX="5.25" PointY="3.875" />
+        <EntityTypeShape EntityType="KurcWorkModel.SizeObject" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="KurcWorkModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.25" />
+        <EntityTypeShape EntityType="KurcWorkModel.User" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="KurcWorkModel.FK_Object_Category" />
+        <AssociationConnector Association="KurcWorkModel.FK_Delivery_Object" />
+        <AssociationConnector Association="KurcWorkModel.FK_Object_SizeObject" />
+        <AssociationConnector Association="KurcWorkModel.FK_Object_User" />
+        <AssociationConnector Association="KurcWorkModel.FK_OrdersObject_Object" />
+        <AssociationConnector Association="KurcWorkModel.FK_OrdersObject_Orders" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

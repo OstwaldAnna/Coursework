@@ -21,11 +21,11 @@
             Name="DgOrders"
             AutoGenerateColumns="False" Grid.Row="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding OrdersObject.Orders.FirstName}"/>
-                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding OrdersObject.Orders.MiddleName}" />
-                <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding OrdersObject.Orders.LastName}" />
-                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Product}" />
-                <DataGridTextColumn Header="Пункт выдачи" Width="*" Binding="{Binding OrdersObject.Address}" />
+                <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding MiddleName}" />
+                <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding OrdersObject.Object.Product}" />
+                <DataGridTextColumn Header="Пункт выдачи" Width="*" Binding="{Binding Address}" />
             </DataGrid.Columns>
         </DataGrid>
         

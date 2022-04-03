@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using magazin.Bd;
 
 namespace magazin.Pages
 {
@@ -21,11 +22,13 @@ namespace magazin.Pages
     /// </summary>
     public partial class MenuPage : Page
     {
-        public MenuPage()
+        public MenuPage(User user)
         {
             InitializeComponent();
+            TbUser.Text = user.Login;
             DataHelper.frmProduct = FrmProduct;
         }
+
         private void Product_Click(object sender, RoutedEventArgs e)
         {
             DataHelper.frmProduct.Navigate(new ProductPage());
@@ -44,6 +47,12 @@ namespace magazin.Pages
         private void Zakaz_Click(object sender, RoutedEventArgs e)
         {
             DataHelper.frmProduct.Navigate(new OrdersPage());
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            
+            DataHelper.frmProduct.Navigate(null);
         }
     }
 }

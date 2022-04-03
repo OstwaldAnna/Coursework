@@ -24,7 +24,7 @@
     <Property Name="Product" Type="nvarchar" MaxLength="50" />
     <Property Name="idSize" Type="int" />
     <Property Name="Amount" Type="int" />
-    <Property Name="Сolors" Type="nvarchar" MaxLength="50" />
+    <Property Name="Сolours" Type="int" />
     <Property Name="idUser" Type="int" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
   </EntityType>
@@ -40,9 +40,10 @@
   </EntityType>
   <EntityType Name="OrdersObject">
     <Key>
-      <PropertyRef Name="idOrder" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="idOrder" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idOrder" Type="int" Nullable="false" />
     <Property Name="idObject" Type="int" />
   </EntityType>
   <EntityType Name="SizeObject">
@@ -132,7 +133,7 @@
   </Association>
   <Association Name="FK_OrdersObject_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
-    <End Role="OrdersObject" Type="Self.OrdersObject" Multiplicity="0..1" />
+    <End Role="OrdersObject" Type="Self.OrdersObject" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Orders">
         <PropertyRef Name="id" />

@@ -25,6 +25,19 @@ namespace magazin.Pages
         {
             InitializeComponent();
             DgProduct.ItemsSource = ODBClass.entities.Object.ToList();
+            CbProduct.SelectedValuePath = "id";
+            CbProduct.DisplayMemberPath = "Name";
+            CbProduct.ItemsSource = ODBClass.entities.Category.ToList();
+        }
+
+        private void CbProduct_DropDownClosed(object sender, EventArgs e)
+        {
+            DgProduct.ItemsSource = ODBClass.entities.Object.Where(x => x.Category.id == (int)CbProduct.SelectedValue).ToList();
+        }
+
+        private void BtnAll_Click(object sender, RoutedEventArgs e)
+        {
+            DgProduct.ItemsSource = ODBClass.entities.Object.ToList();
         }
     }
 }

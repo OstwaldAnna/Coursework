@@ -11,7 +11,8 @@ namespace magazin.Cl
     {
         public static Frame frame;
         public static Frame frmProduct;
-        
+        public static int iduser { get; set; }
+
     }
 }
 

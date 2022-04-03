@@ -10,10 +10,10 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
         FontSize="20"
-      Background="#A7B9D1">
+      Background="#A7B9D1"
+      >
 
     <Grid>
-        
         
     </Grid>
 </Page>

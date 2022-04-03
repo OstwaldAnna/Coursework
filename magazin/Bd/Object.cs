@@ -26,7 +26,7 @@ namespace magazin.Bd
         public string Product { get; set; }
         public Nullable<int> idSize { get; set; }
         public Nullable<int> Amount { get; set; }
-        public string Сolors { get; set; }
+        public Nullable<int> Сolours { get; set; }
         public Nullable<int> idUser { get; set; }
         public Nullable<decimal> Price { get; set; }
     

@@ -18,12 +18,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DataGrid
-            Name="DgProduct"
+            Name="DgDelivery"
             AutoGenerateColumns="False" Grid.Row="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Товар и артикул" Width="*" Binding="{Binding Product}"/>
-                <DataGridTextColumn Header="Ожидаемая дата поставки" Width="*" Binding="{Binding }" />
-                <DataGridTextColumn Header="Приход товара" Width="*" Binding="{Binding}" />
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Object.Product}"/>
+                <DataGridTextColumn Header="Ожидаемая дата поставки" Width="*" Binding="{Binding Data}" />
             </DataGrid.Columns>
         </DataGrid>
 

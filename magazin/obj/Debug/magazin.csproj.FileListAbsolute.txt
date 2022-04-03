@@ -30,7 +30,6 @@ C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\MaterialDesignThemes
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin.csproj.AssemblyReference.cache
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\MainWindow.g.cs
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\App.g.cs
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\obj\Debug\magazin_MarkupCompile.cache
@@ -62,3 +61,4 @@ C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\EntityFramework.SqlS
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\EntityFramework.xml
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Asya\Documents\GitHub\Coursework\magazin\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

@@ -14,6 +14,7 @@ namespace magazin.Bd
     
     public partial class OrdersObject
     {
+        public int id { get; set; }
         public int idOrder { get; set; }
         public Nullable<int> idObject { get; set; }
     
