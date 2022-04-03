@@ -6,13 +6,62 @@
         xmlns:local="clr-namespace:magazin"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1200"
-        MinHeight="800" MinWidth="900"
-        
+        MinHeight="800" MinWidth="900"        
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize" 
-        FontFamily="/magazin;component/Resurs/Fonts/#Roboto">
-    <Grid>
-        <Frame Name="FrmMain" NavigationUIVisibility="Hidden"/>
+        ResizeMode="NoResize"  
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
+        FontSize="20"
+        >
         <!--WindowState="Maximized"-->
+    <Grid>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="147*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10">
+            <TextBlock
+                Text="[Имя работника]" 
+                HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button
+                Name="Product"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Товар их размер и количество"
+                FontSize="18"
+                Margin="2,10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Product_Click" />
+            <Button
+                Name="Dev"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Поставки"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Dev_Click" />
+            <Button
+                Name="Grav"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="График продаж"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Grav_Click" />
+            <Button
+                Name="Zakaz"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Заказы"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Zakaz_Click" />
+        </StackPanel>-->
+        <Frame Name="FrmMain" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

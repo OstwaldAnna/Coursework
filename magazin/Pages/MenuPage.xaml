@@ -1,0 +1,64 @@
+﻿<Page x:Class="magazin.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:magazin.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="MenuPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
+        FontSize="20" Background="#FF97ACC7">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="147*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10">
+            <TextBlock
+                Text="[Имя работника]" 
+                HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button
+                Name="Product"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Товар их размер и количество"
+                FontSize="18"
+                Margin="2,10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Product_Click" />
+            <Button
+                Name="Dev"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Поставки"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Dev_Click" />
+            <Button
+                Name="Grav"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="График продаж"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Grav_Click" />
+            <Button
+                Name="Zakaz"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Заказы"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Zakaz_Click" />
+        </StackPanel>
+        <Frame Name="FrmProduct" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Page>

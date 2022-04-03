@@ -10,5 +10,8 @@ namespace magazin.Cl
     class DataHelper
     {
         public static Frame frame;
+        public static Frame frmProduct;
+        
     }
 }
+

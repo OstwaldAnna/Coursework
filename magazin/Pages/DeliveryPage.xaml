@@ -1,0 +1,31 @@
+﻿<Page x:Class="magazin.Pages.DeliveryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:magazin.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DeliveryPage"
+      Background="#A7B9D1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        FontFamily="/magazin;component/Resurs/Fonts/#Roboto"
+        FontSize="20">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid
+            Name="DgProduct"
+            AutoGenerateColumns="False" Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Товар и артикул" Width="*" Binding="{Binding Product}"/>
+                <DataGridTextColumn Header="Ожидаемая дата поставки" Width="*" Binding="{Binding }" />
+                <DataGridTextColumn Header="Приход товара" Width="*" Binding="{Binding}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>
