@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Asya\Documents\GitHub\Coursework\magazin\App.xaml
-8501099197
+9-1219435307
 21800425316
-26-443948768
+27-2073530095
 221459301702
-MainWindow.xaml;Pages\AddProductPage.xaml;Pages\AuthPage.xaml;Pages\DeliveryPage.xaml;Pages\GravPage.xaml;Pages\MenuPage.xaml;Pages\OrdersPage.xaml;Pages\ProductPage.xaml;
+MainWindow.xaml;Pages\AddCategoryPage.xaml;Pages\AddProductPage.xaml;Pages\AuthPage.xaml;Pages\DeliveryPage.xaml;Pages\GravPage.xaml;Pages\MenuPage.xaml;Pages\OrdersPage.xaml;Pages\ProductPage.xaml;
 
-True
+False
 

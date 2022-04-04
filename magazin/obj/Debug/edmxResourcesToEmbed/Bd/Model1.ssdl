@@ -7,15 +7,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="Delivery">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Data" Type="date" />
-    <Property Name="idObject" Type="int" />
-  </EntityType>
-  <EntityType Name="Object">
+  <EntityType Name="Closes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -27,6 +19,14 @@
     <Property Name="Сolours" Type="int" />
     <Property Name="idUser" Type="int" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="date" />
+    <Property Name="idObject" Type="int" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -72,10 +72,10 @@
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_Delivery_Object">
-    <End Role="Object" Type="Self.Object" Multiplicity="0..1" />
+    <End Role="Closes" Type="Self.Closes" Multiplicity="0..1" />
     <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Object">
+      <Principal Role="Closes">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Delivery">
@@ -85,45 +85,45 @@
   </Association>
   <Association Name="FK_Object_Category">
     <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
-    <End Role="Object" Type="Self.Object" Multiplicity="*" />
+    <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Category">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="Object">
+      <Dependent Role="Closes">
         <PropertyRef Name="idCategory" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Object_SizeObject">
     <End Role="SizeObject" Type="Self.SizeObject" Multiplicity="0..1" />
-    <End Role="Object" Type="Self.Object" Multiplicity="*" />
+    <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SizeObject">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="Object">
+      <Dependent Role="Closes">
         <PropertyRef Name="idSize" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Object_User">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Object" Type="Self.Object" Multiplicity="*" />
+    <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="Object">
+      <Dependent Role="Closes">
         <PropertyRef Name="idUser" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrdersObject_Object">
-    <End Role="Object" Type="Self.Object" Multiplicity="0..1" />
+    <End Role="Closes" Type="Self.Closes" Multiplicity="0..1" />
     <End Role="OrdersObject" Type="Self.OrdersObject" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Object">
+      <Principal Role="Closes">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="OrdersObject">
@@ -145,31 +145,31 @@
   </Association>
   <EntityContainer Name="Хранилище KurcWorkModelContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Closes" EntityType="Self.Closes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Object" EntityType="Self.Object" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OrdersObject" EntityType="Self.OrdersObject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SizeObject" EntityType="Self.SizeObject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Delivery_Object" Association="Self.FK_Delivery_Object">
-      <End Role="Object" EntitySet="Object" />
+      <End Role="Closes" EntitySet="Closes" />
       <End Role="Delivery" EntitySet="Delivery" />
     </AssociationSet>
     <AssociationSet Name="FK_Object_Category" Association="Self.FK_Object_Category">
       <End Role="Category" EntitySet="Category" />
-      <End Role="Object" EntitySet="Object" />
+      <End Role="Closes" EntitySet="Closes" />
     </AssociationSet>
     <AssociationSet Name="FK_Object_SizeObject" Association="Self.FK_Object_SizeObject">
       <End Role="SizeObject" EntitySet="SizeObject" />
-      <End Role="Object" EntitySet="Object" />
+      <End Role="Closes" EntitySet="Closes" />
     </AssociationSet>
     <AssociationSet Name="FK_Object_User" Association="Self.FK_Object_User">
       <End Role="User" EntitySet="User" />
-      <End Role="Object" EntitySet="Object" />
+      <End Role="Closes" EntitySet="Closes" />
     </AssociationSet>
     <AssociationSet Name="FK_OrdersObject_Object" Association="Self.FK_OrdersObject_Object">
-      <End Role="Object" EntitySet="Object" />
+      <End Role="Closes" EntitySet="Closes" />
       <End Role="OrdersObject" EntitySet="OrdersObject" />
     </AssociationSet>
     <AssociationSet Name="FK_OrdersObject_Orders" Association="Self.FK_OrdersObject_Orders">

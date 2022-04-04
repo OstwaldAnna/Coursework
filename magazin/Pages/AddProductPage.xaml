@@ -19,18 +19,35 @@
             <TextBox 
                     x:Name="TbProduct"
                     materialDesign:HintAssist.Hint="Товар"
-                    Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Width="340"/>
+                    Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Width="340"
+                Margin="10"/>
             <ComboBox
-                materialDesign:HintAssist.Hint="OS">
-                <ComboBoxItem
-    Content="Android" />
-                <ComboBoxItem
-    Content="iOS" />
-                <ComboBoxItem
-    Content="Linux" />
-                <ComboBoxItem
-    Content="Windows" />
-            </ComboBox>
+                Margin="10"
+                Name="CbCategory" 
+                materialDesign:HintAssist.Hint="Выберите категорию"
+                materialDesign:HintAssist.HintOpacity=".26"
+                />
+            <ComboBox
+                Margin="10"
+                Name="CbSize" 
+                materialDesign:HintAssist.Hint="Размер"
+                materialDesign:HintAssist.HintOpacity=".26"
+                />
+            <TextBox 
+                    x:Name="TbAmount"
+                    materialDesign:HintAssist.Hint="Количество"
+                    Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Width="340"
+                Margin="10"/>
+            <Button
+                Name="BtnSave"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Сохранить"
+                FontSize="18"
+                Width="Auto"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                Click="BtnSave_Click"/>
 
 
         </StackPanel>

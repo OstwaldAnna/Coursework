@@ -1,4 +1,5 @@
-﻿using System;
+﻿using magazin.Cl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using magazin.Bd;
 
 namespace magazin.Pages
 {
@@ -23,10 +25,29 @@ namespace magazin.Pages
         public AddProductPage()
         {
             InitializeComponent();
+            CbCategory.SelectedValuePath = "id";
+            CbCategory.DisplayMemberPath = "Name";
+            CbCategory.ItemsSource = ODBClass.entities.Category.ToList();
+
+            CbSize.SelectedValuePath = "id";
+            CbSize.DisplayMemberPath = "Name";
+            CbSize.ItemsSource = ODBClass.entities.SizeObject.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+          Closes closes = new Closes()
+           {
+               idSize = (int)CbSize.SelectedValue,
+               idCategory = (int)CbCategory.SelectedValue,
+               Product = TbProduct.Text,
+               Amount = int.Parse(TbAmount.Text),
+           };
+            ODBClass.entities.Closes.Add(closes);
+            ODBClass.entities.SaveChanges();
+            MessageBox.Show("Товар успешно добавлен", "Сообщение", MessageBoxButton.OK);
+
+
 
         }
     }

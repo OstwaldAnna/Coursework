@@ -17,7 +17,7 @@
                       Hoverable="False" DataTooltip="{x:Null}"
                       Height="400">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Джинсы" Values="2" DataLabels="True"
+                <lvc:PieSeries Title="Джинсы" Values="3" DataLabels="True"
                                LabelPoint="{Binding PointLabel}"/>
                 <lvc:PieSeries Title="Юбки" Values="2" DataLabels="True" 
                                LabelPoint="{Binding PointLabel}"/>

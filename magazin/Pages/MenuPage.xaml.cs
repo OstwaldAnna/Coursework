@@ -59,5 +59,10 @@ namespace magazin.Pages
         {
             DataHelper.frmProduct.Navigate(new AddProductPage());
         }
+
+        private void AddCategory_Click(object sender, RoutedEventArgs e)
+        {
+            DataHelper.frmProduct.Navigate(new AddCategoryPage());
+        }
     }
 }

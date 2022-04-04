@@ -17,7 +17,7 @@ namespace magazin.Bd
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Object = new HashSet<Object>();
+            this.Closes = new HashSet<Closes>();
         }
     
         public int id { get; set; }
@@ -25,6 +25,6 @@ namespace magazin.Bd
         public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Object> Object { get; set; }
+        public virtual ICollection<Closes> Closes { get; set; }
     }
 }

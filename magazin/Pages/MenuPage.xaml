@@ -13,23 +13,25 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="94*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>
-            <RowDefinition Height="147*"/>
+            <RowDefinition Height="129*"/>
+            <RowDefinition Height="18*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10">
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,8,0,7">
             <Image Source="/Resurs/logo_1.png" Height="50" Width="350" />
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10">
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10,20,10,21" Grid.ColumnSpan="2">
             <TextBlock
                 Name="TbUser"
                 Text="[Имя работника]" 
                 HorizontalAlignment="Right"/>
         </StackPanel>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Grid.RowSpan="2">
             <Button
                 Name="Product"
                 Style="{StaticResource MaterialDesignFlatDarkButton}"
@@ -55,6 +57,14 @@
                 IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Grav_Click" />
             <Button
+                Name="AddCategory"
+                Style="{StaticResource MaterialDesignFlatDarkButton}"
+                Content="Добавить категорию товара"
+                FontSize="18"
+                Margin="10"
+                IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="AddCategory_Click" />
+            <Button
                 Name="AddProduct"
                 Style="{StaticResource MaterialDesignFlatDarkButton}"
                 Content="Добавить товар"
@@ -71,8 +81,8 @@
                 IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Zakaz_Click" />
         </StackPanel>
-        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="10">
-        <Button
+        <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Margin="10,0,10,10">
+            <Button
                 Name="Exit"
                 Style="{StaticResource MaterialDesignFlatDarkButton}"
                 Content="Назад"
@@ -81,6 +91,7 @@
                 IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Exit_Click"  />
         </StackPanel>
-        <Frame Name="FrmProduct" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+        <Frame Name="FrmProduct" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
     </Grid>
 </Page>

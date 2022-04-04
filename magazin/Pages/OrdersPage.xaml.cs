@@ -24,7 +24,7 @@ namespace magazin.Pages
         public OrdersPage()
         {
             InitializeComponent();
-            DgOrders.ItemsSource = ODBClass.entities.Orders.ToList();
+            DgOrders.ItemsSource = ODBClass.entities.OrdersObject.ToList();
             
         }
     }

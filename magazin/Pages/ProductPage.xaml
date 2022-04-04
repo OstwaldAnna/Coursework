@@ -51,6 +51,7 @@
         <DataGrid
             Background="#BCD0EB"
             Name="DgProduct"
+            IsReadOnly="True"
             AutoGenerateColumns="False" Grid.Row="1" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Product}"/>

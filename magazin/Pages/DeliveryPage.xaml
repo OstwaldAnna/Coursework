@@ -20,9 +20,10 @@
         <DataGrid
             Background="#BCD0EB"
             Name="DgDelivery"
+            IsReadOnly="True"
             AutoGenerateColumns="False" Grid.Row="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Object.Product}"/>
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Closes.Product}"/>
                 <DataGridTextColumn Header="Ожидаемая дата поставки" Width="*" Binding="{Binding Data}" />
             </DataGrid.Columns>
         </DataGrid>

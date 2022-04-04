@@ -20,13 +20,14 @@
         <DataGrid
             Background="#BCD0EB"
             Name="DgOrders"
+            IsReadOnly="True"
             AutoGenerateColumns="False" Grid.Row="0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding MiddleName}" />
-                <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding LastName}" />
-                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding OrdersObject.Object.Product}" />
-                <DataGridTextColumn Header="Пункт выдачи" Width="*" Binding="{Binding Address}" />
+                <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding Orders.FirstName}"/>
+                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Orders.MiddleName}" />
+                <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding Orders.LastName}" />
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Closes.Product}" />
+                <DataGridTextColumn Header="Пункт выдачи" Width="*" Binding="{Binding Orders.Address}" />
             </DataGrid.Columns>
         </DataGrid>
         

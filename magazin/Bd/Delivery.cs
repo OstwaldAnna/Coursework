@@ -18,6 +18,6 @@ namespace magazin.Bd
         public Nullable<System.DateTime> Data { get; set; }
         public Nullable<int> idObject { get; set; }
     
-        public virtual Object Object { get; set; }
+        public virtual Closes Closes { get; set; }
     }
 }

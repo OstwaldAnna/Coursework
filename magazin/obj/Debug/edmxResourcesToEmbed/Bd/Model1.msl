@@ -9,18 +9,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Delivery">
-      <EntityTypeMapping TypeName="KurcWorkModel.Delivery">
-        <MappingFragment StoreEntitySet="Delivery">
-          <ScalarProperty Name="idObject" ColumnName="idObject" />
-          <ScalarProperty Name="Data" ColumnName="Data" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Object">
-      <EntityTypeMapping TypeName="KurcWorkModel.Object">
-        <MappingFragment StoreEntitySet="Object">
+    <EntitySetMapping Name="Closes">
+      <EntityTypeMapping TypeName="KurcWorkModel.Closes">
+        <MappingFragment StoreEntitySet="Closes">
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="idUser" ColumnName="idUser" />
           <ScalarProperty Name="Сolours" ColumnName="Сolours" />
@@ -28,6 +19,15 @@
           <ScalarProperty Name="idSize" ColumnName="idSize" />
           <ScalarProperty Name="Product" ColumnName="Product" />
           <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Delivery">
+      <EntityTypeMapping TypeName="KurcWorkModel.Delivery">
+        <MappingFragment StoreEntitySet="Delivery">
+          <ScalarProperty Name="idObject" ColumnName="idObject" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

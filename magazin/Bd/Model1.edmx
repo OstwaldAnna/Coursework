@@ -12,15 +12,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="Delivery">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Data" Type="date" />
-          <Property Name="idObject" Type="int" />
-        </EntityType>
-        <EntityType Name="Object">
+        <EntityType Name="Closes">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -32,6 +24,14 @@
           <Property Name="Сolours" Type="int" />
           <Property Name="idUser" Type="int" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="date" />
+          <Property Name="idObject" Type="int" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -77,10 +77,10 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_Delivery_Object">
-          <End Role="Object" Type="Self.Object" Multiplicity="0..1" />
+          <End Role="Closes" Type="Self.Closes" Multiplicity="0..1" />
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Object">
+            <Principal Role="Closes">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Delivery">
@@ -90,45 +90,45 @@
         </Association>
         <Association Name="FK_Object_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
-          <End Role="Object" Type="Self.Object" Multiplicity="*" />
+          <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Category">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idCategory" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_SizeObject">
           <End Role="SizeObject" Type="Self.SizeObject" Multiplicity="0..1" />
-          <End Role="Object" Type="Self.Object" Multiplicity="*" />
+          <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SizeObject">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idSize" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_User">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Object" Type="Self.Object" Multiplicity="*" />
+          <End Role="Closes" Type="Self.Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idUser" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrdersObject_Object">
-          <End Role="Object" Type="Self.Object" Multiplicity="0..1" />
+          <End Role="Closes" Type="Self.Closes" Multiplicity="0..1" />
           <End Role="OrdersObject" Type="Self.OrdersObject" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Object">
+            <Principal Role="Closes">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="OrdersObject">
@@ -150,31 +150,31 @@
         </Association>
         <EntityContainer Name="Хранилище KurcWorkModelContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Closes" EntityType="Self.Closes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Object" EntityType="Self.Object" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrdersObject" EntityType="Self.OrdersObject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SizeObject" EntityType="Self.SizeObject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Delivery_Object" Association="Self.FK_Delivery_Object">
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
           <AssociationSet Name="FK_Object_Category" Association="Self.FK_Object_Category">
             <End Role="Category" EntitySet="Category" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_Object_SizeObject" Association="Self.FK_Object_SizeObject">
             <End Role="SizeObject" EntitySet="SizeObject" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_Object_User" Association="Self.FK_Object_User">
             <End Role="User" EntitySet="User" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdersObject_Object" Association="Self.FK_OrdersObject_Object">
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
             <End Role="OrdersObject" EntitySet="OrdersObject" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdersObject_Orders" Association="Self.FK_OrdersObject_Orders">
@@ -188,8 +188,8 @@
       <Schema Namespace="KurcWorkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="KurcWorkEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Category" EntityType="KurcWorkModel.Category" />
+          <EntitySet Name="Closes" EntityType="KurcWorkModel.Closes" />
           <EntitySet Name="Delivery" EntityType="KurcWorkModel.Delivery" />
-          <EntitySet Name="Object" EntityType="KurcWorkModel.Object" />
           <EntitySet Name="Orders" EntityType="KurcWorkModel.Orders" />
           <EntitySet Name="OrdersObject" EntityType="KurcWorkModel.OrdersObject" />
           <EntitySet Name="SizeObject" EntityType="KurcWorkModel.SizeObject" />
@@ -197,22 +197,22 @@
           <EntitySet Name="User" EntityType="KurcWorkModel.User" />
           <AssociationSet Name="FK_Object_Category" Association="KurcWorkModel.FK_Object_Category">
             <End Role="Category" EntitySet="Category" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_Delivery_Object" Association="KurcWorkModel.FK_Delivery_Object">
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
           <AssociationSet Name="FK_Object_SizeObject" Association="KurcWorkModel.FK_Object_SizeObject">
             <End Role="SizeObject" EntitySet="SizeObject" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_Object_User" Association="KurcWorkModel.FK_Object_User">
             <End Role="User" EntitySet="User" />
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdersObject_Object" Association="KurcWorkModel.FK_OrdersObject_Object">
-            <End Role="Object" EntitySet="Object" />
+            <End Role="Closes" EntitySet="Closes" />
             <End Role="OrdersObject" EntitySet="OrdersObject" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdersObject_Orders" Association="KurcWorkModel.FK_OrdersObject_Orders">
@@ -226,18 +226,9 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Object" Relationship="KurcWorkModel.FK_Object_Category" FromRole="Category" ToRole="Object" />
+          <NavigationProperty Name="Closes" Relationship="KurcWorkModel.FK_Object_Category" FromRole="Category" ToRole="Closes" />
         </EntityType>
-        <EntityType Name="Delivery">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Data" Type="DateTime" Precision="0" />
-          <Property Name="idObject" Type="Int32" />
-          <NavigationProperty Name="Object" Relationship="KurcWorkModel.FK_Delivery_Object" FromRole="Delivery" ToRole="Object" />
-        </EntityType>
-        <EntityType Name="Object">
+        <EntityType Name="Closes">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -249,11 +240,20 @@
           <Property Name="Сolours" Type="Int32" />
           <Property Name="idUser" Type="Int32" />
           <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="Category" Relationship="KurcWorkModel.FK_Object_Category" FromRole="Object" ToRole="Category" />
-          <NavigationProperty Name="Delivery" Relationship="KurcWorkModel.FK_Delivery_Object" FromRole="Object" ToRole="Delivery" />
-          <NavigationProperty Name="SizeObject" Relationship="KurcWorkModel.FK_Object_SizeObject" FromRole="Object" ToRole="SizeObject" />
-          <NavigationProperty Name="User" Relationship="KurcWorkModel.FK_Object_User" FromRole="Object" ToRole="User" />
-          <NavigationProperty Name="OrdersObject" Relationship="KurcWorkModel.FK_OrdersObject_Object" FromRole="Object" ToRole="OrdersObject" />
+          <NavigationProperty Name="Category" Relationship="KurcWorkModel.FK_Object_Category" FromRole="Closes" ToRole="Category" />
+          <NavigationProperty Name="Delivery" Relationship="KurcWorkModel.FK_Delivery_Object" FromRole="Closes" ToRole="Delivery" />
+          <NavigationProperty Name="SizeObject" Relationship="KurcWorkModel.FK_Object_SizeObject" FromRole="Closes" ToRole="SizeObject" />
+          <NavigationProperty Name="User" Relationship="KurcWorkModel.FK_Object_User" FromRole="Closes" ToRole="User" />
+          <NavigationProperty Name="OrdersObject" Relationship="KurcWorkModel.FK_OrdersObject_Object" FromRole="Closes" ToRole="OrdersObject" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Precision="0" />
+          <Property Name="idObject" Type="Int32" />
+          <NavigationProperty Name="Closes" Relationship="KurcWorkModel.FK_Delivery_Object" FromRole="Delivery" ToRole="Closes" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -273,7 +273,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idOrder" Type="Int32" Nullable="false" />
           <Property Name="idObject" Type="Int32" />
-          <NavigationProperty Name="Object" Relationship="KurcWorkModel.FK_OrdersObject_Object" FromRole="OrdersObject" ToRole="Object" />
+          <NavigationProperty Name="Closes" Relationship="KurcWorkModel.FK_OrdersObject_Object" FromRole="OrdersObject" ToRole="Closes" />
           <NavigationProperty Name="Orders" Relationship="KurcWorkModel.FK_OrdersObject_Orders" FromRole="OrdersObject" ToRole="Orders" />
         </EntityType>
         <EntityType Name="SizeObject">
@@ -282,7 +282,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Object" Relationship="KurcWorkModel.FK_Object_SizeObject" FromRole="SizeObject" ToRole="Object" />
+          <NavigationProperty Name="Closes" Relationship="KurcWorkModel.FK_Object_SizeObject" FromRole="SizeObject" ToRole="Closes" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -301,25 +301,25 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Object" Relationship="KurcWorkModel.FK_Object_User" FromRole="User" ToRole="Object" />
+          <NavigationProperty Name="Closes" Relationship="KurcWorkModel.FK_Object_User" FromRole="User" ToRole="Closes" />
         </EntityType>
         <Association Name="FK_Object_Category">
           <End Type="KurcWorkModel.Category" Role="Category" Multiplicity="0..1" />
-          <End Type="KurcWorkModel.Object" Role="Object" Multiplicity="*" />
+          <End Type="KurcWorkModel.Closes" Role="Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Category">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idCategory" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Delivery_Object">
-          <End Type="KurcWorkModel.Object" Role="Object" Multiplicity="0..1" />
+          <End Type="KurcWorkModel.Closes" Role="Closes" Multiplicity="0..1" />
           <End Type="KurcWorkModel.Delivery" Role="Delivery" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Object">
+            <Principal Role="Closes">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Delivery">
@@ -329,33 +329,33 @@
         </Association>
         <Association Name="FK_Object_SizeObject">
           <End Type="KurcWorkModel.SizeObject" Role="SizeObject" Multiplicity="0..1" />
-          <End Type="KurcWorkModel.Object" Role="Object" Multiplicity="*" />
+          <End Type="KurcWorkModel.Closes" Role="Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SizeObject">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idSize" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Object_User">
           <End Type="KurcWorkModel.User" Role="User" Multiplicity="0..1" />
-          <End Type="KurcWorkModel.Object" Role="Object" Multiplicity="*" />
+          <End Type="KurcWorkModel.Closes" Role="Closes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Object">
+            <Dependent Role="Closes">
               <PropertyRef Name="idUser" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrdersObject_Object">
-          <End Type="KurcWorkModel.Object" Role="Object" Multiplicity="0..1" />
+          <End Type="KurcWorkModel.Closes" Role="Closes" Multiplicity="0..1" />
           <End Type="KurcWorkModel.OrdersObject" Role="OrdersObject" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Object">
+            <Principal Role="Closes">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="OrdersObject">
@@ -389,18 +389,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Delivery">
-            <EntityTypeMapping TypeName="KurcWorkModel.Delivery">
-              <MappingFragment StoreEntitySet="Delivery">
-                <ScalarProperty Name="idObject" ColumnName="idObject" />
-                <ScalarProperty Name="Data" ColumnName="Data" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Object">
-            <EntityTypeMapping TypeName="KurcWorkModel.Object">
-              <MappingFragment StoreEntitySet="Object">
+          <EntitySetMapping Name="Closes">
+            <EntityTypeMapping TypeName="KurcWorkModel.Closes">
+              <MappingFragment StoreEntitySet="Closes">
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="idUser" ColumnName="idUser" />
                 <ScalarProperty Name="Сolours" ColumnName="Сolours" />
@@ -408,6 +399,15 @@
                 <ScalarProperty Name="idSize" ColumnName="idSize" />
                 <ScalarProperty Name="Product" ColumnName="Product" />
                 <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Delivery">
+            <EntityTypeMapping TypeName="KurcWorkModel.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="idObject" ColumnName="idObject" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

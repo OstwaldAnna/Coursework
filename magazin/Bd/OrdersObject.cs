@@ -18,7 +18,7 @@ namespace magazin.Bd
         public int idOrder { get; set; }
         public Nullable<int> idObject { get; set; }
     
-        public virtual Object Object { get; set; }
+        public virtual Closes Closes { get; set; }
         public virtual Orders Orders { get; set; }
     }
 }

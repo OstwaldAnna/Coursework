@@ -26,8 +26,8 @@ namespace magazin.Bd
         }
     
         public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Closes> Closes { get; set; }
         public virtual DbSet<Delivery> Delivery { get; set; }
-        public virtual DbSet<Object> Object { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<OrdersObject> OrdersObject { get; set; }
         public virtual DbSet<SizeObject> SizeObject { get; set; }
