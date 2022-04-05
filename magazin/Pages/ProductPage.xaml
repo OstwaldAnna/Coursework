@@ -57,6 +57,7 @@
                 <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding Product}"/>
                 <DataGridTextColumn Header="Размеры" Width="*" Binding="{Binding SizeObject.Name}" />
                 <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Amount}" />
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Price}" />
                 <!--<DataGridTextColumn Header="Цвета" Width="*" Binding="{Binding Colours}" />-->
             </DataGrid.Columns>
 

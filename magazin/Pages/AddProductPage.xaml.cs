@@ -42,6 +42,7 @@ namespace magazin.Pages
                idCategory = (int)CbCategory.SelectedValue,
                Product = TbProduct.Text,
                Amount = int.Parse(TbAmount.Text),
+               Price = decimal.Parse(TbPrice.Text),
            };
             ODBClass.entities.Closes.Add(closes);
             ODBClass.entities.SaveChanges();
