@@ -37,7 +37,7 @@
                 Style="{StaticResource MaterialDesignFlatDarkButton}"
                 Content="Товар их размер и количество"
                 FontSize="18"
-                Margin="2,10"
+                Margin="10"
                 IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Product_Click" />
             <Button

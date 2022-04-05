@@ -32,7 +32,11 @@ namespace magazin.Pages
 
         private void CbProduct_DropDownClosed(object sender, EventArgs e)
         {
+            if (CbProduct.SelectedIndex > -1)
+            {
             DgProduct.ItemsSource = ODBClass.entities.Closes.Where(x => x.Category.id == (int)CbProduct.SelectedValue).ToList();
+            }
+
         }
 
         private void BtnAll_Click(object sender, RoutedEventArgs e)
